@@ -42,7 +42,7 @@ fun HomeScreen() {
     ) {
         Column() {
             GreetingSection()
-            ChipSection(chips = listOf("hello", "world", "boy"))
+            ChipSection(chips = listOf("Sweet sleep", "Nice dream", "Good night"))
         }
     }
 }
