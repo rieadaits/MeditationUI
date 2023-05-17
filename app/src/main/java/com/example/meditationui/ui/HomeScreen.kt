@@ -50,7 +50,7 @@ fun HomeScreen() {
                 features = listOf(
                     Feature(
                         title = "Sleep meditation",
-                        R.drawable.ic_headphone,
+                        iconId = R.drawable.ic_headphone,
                         BlueViolet1,
                         BlueViolet2,
                         BlueViolet3
@@ -79,6 +79,16 @@ fun HomeScreen() {
                 )
             )
         }
+
+        BottomMenu(
+            items = listOf(
+                BottomMenuContent("Home", R.drawable.ic_home),
+                BottomMenuContent("Meditate", R.drawable.ic_bubble),
+                BottomMenuContent("Sleep", R.drawable.ic_moon),
+                BottomMenuContent("Music", R.drawable.ic_music),
+                BottomMenuContent("Profile", R.drawable.ic_profile),
+            ), modifier = Modifier.align(Alignment.BottomCenter)
+        )
     }
 }
 

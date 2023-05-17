@@ -7,6 +7,6 @@ data class Feature(
     val title: String,
     @DrawableRes val iconId: Int,
     val lightColor: Color,
-    val darkColor: Color,
     val mediumColor: Color,
+    val darkColor: Color,
 )
