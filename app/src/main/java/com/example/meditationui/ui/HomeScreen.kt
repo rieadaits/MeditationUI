@@ -32,8 +32,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.meditationui.R
 import com.example.meditationui.ui.theme.*
+import com.ramcosta.composedestinations.annotation.Destination
 
 
+@Destination(start = true)
 @Composable
 fun HomeScreen() {
     Box(
