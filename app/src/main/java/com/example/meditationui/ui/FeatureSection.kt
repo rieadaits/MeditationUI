@@ -29,12 +29,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.meditationui.ui.destinations.MotiveDetailsDestination
 import com.example.meditationui.ui.theme.*
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 
 @Composable
 fun FeatureSection(
-    features: List<Feature>
+    features: List<Feature>, navigator: DestinationsNavigator
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
@@ -43,29 +45,33 @@ fun FeatureSection(
             modifier = Modifier.padding(horizontal = 15.dp)
         )
 
-        LazyVerticalGrid(columns = GridCells.Fixed(2),
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
 
             content = {
                 items(features.size) {
-                    FeatureItem(feature = features[it])
+                    FeatureItem(feature = features[it]) {
+                        navigator.navigate(MotiveDetailsDestination(destinationString = features[it].title))
+                    }
                 }
+
             },
             contentPadding = PaddingValues(start = 7.5.dp, end = 7.5.dp, bottom = 100.dp),
-            modifier = Modifier.fillMaxHeight())
+            modifier = Modifier.fillMaxHeight()
+        )
     }
 }
 
 @Composable
 fun FeatureItem(
-    feature: Feature
+    feature: Feature, onClick: () -> Unit,
 ) {
-    BoxWithConstraints(
-        modifier = Modifier
-            .padding(7.5.dp)
-            .aspectRatio(1f)
-            .clip(RoundedCornerShape(10.dp))
-            .background(feature.darkColor)
-    ) {
+    BoxWithConstraints(modifier = Modifier
+        .padding(7.5.dp)
+        .aspectRatio(1f)
+        .clip(RoundedCornerShape(10.dp))
+        .background(feature.darkColor)
+        .clickable { onClick() }) {
         val width = constraints.maxWidth
         val height = constraints.maxHeight
 
@@ -105,16 +111,13 @@ fun FeatureItem(
             close()
         }
         Canvas(
-            modifier = Modifier
-                .fillMaxSize()
+            modifier = Modifier.fillMaxSize()
         ) {
             drawPath(
-                path = mediumColoredPath,
-                color = feature.mediumColor
+                path = mediumColoredPath, color = feature.mediumColor
             )
             drawPath(
-                path = lightColoredPath,
-                color = feature.lightColor
+                path = lightColoredPath, color = feature.lightColor
             )
         }
         Box(
@@ -134,8 +137,7 @@ fun FeatureItem(
                 tint = Color.White,
                 modifier = Modifier.align(Alignment.BottomStart)
             )
-            Text(
-                text = "Start",
+            Text(text = "Start",
                 color = TextWhite,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
@@ -146,8 +148,7 @@ fun FeatureItem(
                     .align(Alignment.BottomEnd)
                     .clip(RoundedCornerShape(10.dp))
                     .background(ButtonBlue)
-                    .padding(vertical = 6.dp, horizontal = 15.dp)
-            )
+                    .padding(vertical = 6.dp, horizontal = 15.dp))
         }
     }
 }

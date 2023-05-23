@@ -31,13 +31,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.meditationui.R
+import com.example.meditationui.ui.destinations.MotiveDetailsDestination
 import com.example.meditationui.ui.theme.*
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 
 @Destination(start = true)
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    navigator: DestinationsNavigator
+) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -46,7 +50,8 @@ fun HomeScreen() {
         Column {
             GreetingSection()
 
-            ChipSection(chips = listOf("Sweet sleep", "Nice dream", "Good night"))
+            ChipSection(chips = listOf("Sweet sleep", "Nice dream", "Good night")
+            )
             CurrentMeditation()
             FeatureSection(
                 features = listOf(
@@ -78,7 +83,8 @@ fun HomeScreen() {
                         Beige2,
                         Beige3
                     )
-                )
+                ),
+                navigator = navigator
             )
         }
 
@@ -121,7 +127,7 @@ fun GreetingSection(
 
 @Composable
 fun ChipSection(
-    chips: List<String>
+    chips: List<String>,
 ) {
     var selectedChipIndex by remember { mutableStateOf(0) }
     LazyRow {
@@ -131,7 +137,9 @@ fun ChipSection(
                 modifier = Modifier
                     .padding(start = 15.dp, top = 15.dp, bottom = 15.dp)
                     .clip(RoundedCornerShape(10.dp))
-                    .clickable { selectedChipIndex = it }
+                    .clickable {
+                        selectedChipIndex = it
+                    }
                     .background(if (selectedChipIndex == it) ButtonBlue else DarkerButtonBlue)
                     .padding(15.dp)) {
                 Text(
