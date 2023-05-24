@@ -31,13 +31,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.meditationui.R
-import com.example.meditationui.ui.destinations.MotiveDetailsDestination
 import com.example.meditationui.ui.theme.*
-import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 
-@Destination(start = true)
+
 @Composable
 fun HomeScreen(
     navigator: DestinationsNavigator
@@ -88,7 +86,7 @@ fun HomeScreen(
             )
         }
 
-        BottomMenu(
+     /*   BottomMenu(
             items = listOf(
                 BottomMenuContent("Home", R.drawable.ic_home),
                 BottomMenuContent("Meditate", R.drawable.ic_bubble),
@@ -96,7 +94,7 @@ fun HomeScreen(
                 BottomMenuContent("Music", R.drawable.ic_music),
                 BottomMenuContent("Profile", R.drawable.ic_profile),
             ), modifier = Modifier.align(Alignment.BottomCenter)
-        )
+        )*/
     }
 }
 
