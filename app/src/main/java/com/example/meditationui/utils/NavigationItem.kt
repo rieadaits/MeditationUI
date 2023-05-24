@@ -7,7 +7,7 @@ sealed class NavigationItem(val route: String, val title: String, @DrawableRes v
 
     object Home : NavigationItem("home", "Home", R.drawable.ic_home)
 
-    object Meditation : NavigationItem("meditation","Meditate", R.drawable.ic_bubble)
+    object Meditation : NavigationItem("meditation","Meditation", R.drawable.ic_bubble)
 
     object Sleep : NavigationItem("sleep","Sleep", R.drawable.ic_moon)
 
