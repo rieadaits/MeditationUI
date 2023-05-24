@@ -3,17 +3,13 @@ package com.example.meditationui.ui
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -29,50 +25,32 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.meditationui.ui.destinations.MotiveDetailsDestination
-import com.example.meditationui.ui.theme.*
+import com.example.meditationui.ui.theme.ButtonBlue
+import com.example.meditationui.ui.theme.TextWhite
 import com.example.meditationui.utils.HexToJetpackColor.getColor
-import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.ramcosta.composedestinations.annotation.Destination
 
-
+@Destination
 @Composable
-fun FeatureSection(
-    features: List<Feature>, navigator: DestinationsNavigator
-) {
-    Column(modifier = Modifier.fillMaxWidth()) {
-        Text(
-            text = "Features",
-            style = MaterialTheme.typography.headlineSmall,
-            modifier = Modifier.padding(horizontal = 15.dp)
-        )
-
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
-
-            content = {
-                items(features.size) {
-                    FeatureItem(feature = features[it]) {
-                        navigator.navigate(MotiveDetailsDestination(feature = features[it]))
-                    }
-                }
-
-            },
-            contentPadding = PaddingValues(start = 7.5.dp, end = 7.5.dp, bottom = 100.dp),
-            modifier = Modifier.fillMaxHeight()
-        )
+fun MotiveDetails(
+    feature: Feature,
+){
+    Box(modifier = Modifier.padding(15.dp)){
+        Column(verticalArrangement = Arrangement.Center) {
+            ItemDetails(feature = feature)
+        }
     }
 }
 
 @Composable
-fun FeatureItem(
-    feature: Feature, onClick: () -> Unit,
+fun ItemDetails(
+    feature: Feature,
 ) {
     BoxWithConstraints(modifier = Modifier
         .padding(7.5.dp)
         .aspectRatio(1f)
         .clip(RoundedCornerShape(10.dp))
-        .background(getColor(feature.darkColor))
-        .clickable { onClick() }) {
+        .background(getColor(feature.darkColor))) {
         val width = constraints.maxWidth
         val height = constraints.maxHeight
 

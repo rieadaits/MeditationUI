@@ -58,30 +58,30 @@ fun HomeScreen(
                     Feature(
                         title = "Sleep meditation",
                         iconId = R.drawable.ic_headphone,
-                        BlueViolet1,
-                        BlueViolet2,
-                        BlueViolet3
+                        "#aeb4fd",
+                        "#9fa5fe",
+                        "#8f98fd"
                     ),
                     Feature(
                         title = "Tips for sleeping",
                         R.drawable.ic_videocam,
-                        LightGreen1,
-                        LightGreen2,
-                        LightGreen3
+                        "#54e1b6",
+                        "#36ddab",
+                        "#11d79b"
                     ),
                     Feature(
                         title = "Night island",
                         R.drawable.ic_headphone,
-                        OrangeYellow1,
-                        OrangeYellow2,
-                        OrangeYellow3
+                        "#f0bd28",
+                        "#f1c746",
+                        "#f4cf65"
                     ),
                     Feature(
                         title = "Calming sounds",
                         R.drawable.ic_headphone,
-                        Beige1,
-                        Beige2,
-                        Beige3
+                        "#fdbda1",
+                        "#fcaf90",
+                        "#f9a27b"
                     )
                 ),
                 navigator = navigator
