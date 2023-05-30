@@ -1,4 +1,4 @@
-package com.example.meditationui.ui
+package com.example.meditationui.screens.widgets
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -25,6 +25,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.meditationui.screens.standardQuadFromTo
+import com.example.meditationui.screens.widgets.home_widgets.Feature
 import com.example.meditationui.ui.theme.ButtonBlue
 import com.example.meditationui.ui.theme.TextWhite
 import com.example.meditationui.utils.HexToJetpackColor.getColor

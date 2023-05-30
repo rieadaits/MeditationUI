@@ -1,4 +1,4 @@
-package com.example.meditationui.ui
+package com.example.meditationui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -31,6 +31,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.meditationui.R
+import com.example.meditationui.screens.widgets.home_widgets.Feature
+import com.example.meditationui.screens.widgets.home_widgets.FeatureSection
 import com.example.meditationui.ui.theme.*
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 

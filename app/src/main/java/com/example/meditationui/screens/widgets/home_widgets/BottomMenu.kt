@@ -1,4 +1,4 @@
-package com.example.meditationui.ui
+package com.example.meditationui.screens.widgets.home_widgets
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background

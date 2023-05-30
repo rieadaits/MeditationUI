@@ -1,4 +1,4 @@
-package com.example.meditationui.ui
+package com.example.meditationui.screens.widgets.home_widgets
 
 import android.os.Parcelable
 import androidx.annotation.DrawableRes

@@ -1,4 +1,4 @@
-package com.example.meditationui.ui
+package com.example.meditationui.screens.widgets.home_widgets
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
@@ -28,6 +28,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.meditationui.screens.HomeScreen
+import com.example.meditationui.screens.MusicScreen
+import com.example.meditationui.screens.ProfileScreen
+import com.example.meditationui.screens.SleepScreen
+import com.example.meditationui.ui.MeditationScreen
 import com.example.meditationui.ui.theme.AquaBlue
 import com.example.meditationui.ui.theme.ButtonBlue
 import com.example.meditationui.ui.theme.DeepBlue
