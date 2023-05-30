@@ -34,7 +34,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.meditationui.screens.standardQuadFromTo
-import com.example.meditationui.ui.destinations.MotiveDetailsDestination
+import com.example.meditationui.screens.widgets.destinations.MotiveDetailsDestination
 import com.example.meditationui.ui.theme.ButtonBlue
 import com.example.meditationui.ui.theme.TextWhite
 import com.example.meditationui.utils.HexToJetpackColor.getColor

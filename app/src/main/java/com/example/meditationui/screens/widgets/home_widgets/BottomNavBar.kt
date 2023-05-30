@@ -32,7 +32,7 @@ import com.example.meditationui.screens.HomeScreen
 import com.example.meditationui.screens.MusicScreen
 import com.example.meditationui.screens.ProfileScreen
 import com.example.meditationui.screens.SleepScreen
-import com.example.meditationui.ui.MeditationScreen
+import com.example.meditationui.screens.MeditationScreen
 import com.example.meditationui.ui.theme.AquaBlue
 import com.example.meditationui.ui.theme.ButtonBlue
 import com.example.meditationui.ui.theme.DeepBlue
