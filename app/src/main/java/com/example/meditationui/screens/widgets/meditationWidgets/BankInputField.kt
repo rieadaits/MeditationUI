@@ -1,4 +1,4 @@
-package com.example.meditationui.screens
+package com.example.meditationui.screens.widgets.meditationWidgets
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActionScope
